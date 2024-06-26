@@ -22,13 +22,13 @@ const LoginPages = () => {
             setError(response.message || 'Error al iniciar sesión');
             return;
         }
-        navigate('/');
+        navigate('/test-mkt/');
     };
 
     useEffect(()=> {
         const suscribe = async () => {
             const user = await currentUserFirebase();
-            if(user) return navigate('/')
+            if(user) return navigate('/test-mkt/')
         }
 
         return () => suscribe()

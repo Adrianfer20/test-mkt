@@ -1,5 +1,8 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Contexts
+import { AuthContext } from './context/AuthProvider';
 
 // Hooks
 import ProtectedRoute from './components/ProtectedRoute';
@@ -34,13 +37,13 @@ function App() {
         {/* Main Content */}
         <main className={styles.main}>
           <Routes>
-            <Route path='/login' element={<LoginPages />} />
-            <Route path='/registro' element={<RegisterPages/>} />
+            <Route path='/test-mkt/login' element={<LoginPages />} />
+            <Route path='test-mkt/registro' element={<RegisterPages/>} />
             <Route element={<ProtectedRoute />}>
-              <Route path='/' element={<HomePages />} />
-              <Route path='/update-user' element={<UpdateUserPages />} />
+              <Route path='/test-mkt/' element={<HomePages />} />
+              <Route path='/test-mkt/update-user' element={<UpdateUserPages />} />
             </Route>
-            <Route path='/*' element={<NotFoundPage />} /> {/* 404 Route */}
+            <Route path='test-mkt/*' element={<NotFoundPage />} /> {/* 404 Route */}
           </Routes>
           <Footer />
         </main>
@@ -50,4 +53,3 @@ function App() {
 }
 
 export default App;
-

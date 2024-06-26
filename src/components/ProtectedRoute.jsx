@@ -6,7 +6,7 @@ import SectionLoading from './SectionLoading';
 
 
 
-const ProtectedRoute = ({ redirectPath = '/login', loadingComponent: LoadingComponent = null }) => {
+const ProtectedRoute = ({ redirectPath = '/test-mkt/login', loadingComponent: LoadingComponent = null }) => {
     const { user, loading } = useAuth();
 
     if (loading) {
