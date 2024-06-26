@@ -1,8 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// Contexts
-import { AuthContext } from './context/AuthProvider';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Hooks
 import ProtectedRoute from './components/ProtectedRoute';
@@ -53,3 +50,4 @@ function App() {
 }
 
 export default App;
+
