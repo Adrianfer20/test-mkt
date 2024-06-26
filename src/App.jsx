@@ -43,7 +43,7 @@ function App() {
               <Route path='/test-mkt/' element={<HomePages />} />
               <Route path='/test-mkt/update-user' element={<UpdateUserPages />} />
             </Route>
-            <Route path='test-mkt/*' element={<NotFoundPage />} /> {/* 404 Route */}
+            <Route path='test-mkt/*' element={<LoginPages />} /> {/* 404 Route */}
           </Routes>
           <Footer />
         </main>
